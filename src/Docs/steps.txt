@@ -1,0 +1,9 @@
+download node / tsc/ angular
+check current version
+node -v
+npm -v
+tsc -v
+----------------------------------------------
+create a new project
+ng new projectName
+test project run by wrting ng s
