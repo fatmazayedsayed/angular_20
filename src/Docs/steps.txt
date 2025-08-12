@@ -21,7 +21,20 @@ it has the starting point of the app which by default is index.html and
 app.route:routing for your components(paths)
 style.scss->golab css file for the project
 --------------------------------------------------------------------------------------------
-#
+#components
+  -classes that contians business logic
+  -all components should be imported into app components to be able to acccesses through the project
+  ng g c componentName
+  -components by default become stand alone , no need to define it in app component
+    imports: [],// all dependencies
+    templateUrl: './user.html',//html
+    styleUrl: './user.scss'
+    selector: 'app-user',
+    'app'is a prefix u can change it from angular.json (   "prefix": "app")
+  -run stand alone component 
+    call it in app.component
+    import component in app
+
 --------------------------------------------------------------------------------------------
 #
 --------------------------------------------------------------------------------------------
