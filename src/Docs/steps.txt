@@ -36,7 +36,21 @@ style.scss->golab css file for the project
     import component in app
 
 --------------------------------------------------------------------------------------------
-#
+#Data Binding
+  -linking between entities (html/component), allow data updating
+  -types of Data Binding:
+    -one way data binding
+      -interpolation{{}}-> from component to html
+      -property binding[]->from component to html
+      -event binding()->from FE to component when user make action in FE
+    -two way data binding[()]
+      data changed bi-directionlay from component and view
+
+    
+   
+
+
+
 --------------------------------------------------------------------------------------------
 #
 --------------------------------------------------------------------------------------------

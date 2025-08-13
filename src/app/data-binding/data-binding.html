@@ -1,0 +1,17 @@
+<p>data-binding works!</p>
+<div>
+    <p>1. interpulation</p>
+
+    student: {{name}}
+    topic to study {{topic}}
+    <p>2. property binding</p>
+
+    <img [src]="imageSrc">
+    <p>3. Event binding</p>
+    <button (click)="onSave()"> save </button>
+</div>
+<p>two way-binding</p>
+<div>
+    <p><input type="text" [(ngModel)]="twoWayBinding"></p>
+    resulut is:{{twoWayBinding}}
+</div>
