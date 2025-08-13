@@ -45,14 +45,27 @@ style.scss->golab css file for the project
       -event binding()->from FE to component when user make action in FE
     -two way data binding[()]
       data changed bi-directionlay from component and view
-
-    
-   
-
-
-
 --------------------------------------------------------------------------------------------
-#
+#Directives
+  classes that add additional behavior to elements in app,
+  to manage form/list/style 
+  -types of Directives:
+    1. component:used with a template (ng g c 'name')-> 
+      u have to import what u need to be accesed on your component 
+      like (ngIf, anothe component)
+    2. structural: change appearance or behavior of an elelment,componet or anothe Directive
+      like (ngIf, ngFor,ngSwitch)
+    3. attribute: change DOM layout by adding and removing DOm elements
+      [ngClass],[ngStyle],[ngModel]
+install bootstabp (npm i bootstrap)  
+call bootstrap files in angular.json
+  "styles": [
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "scripts": [
+                        "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ],
 --------------------------------------------------------------------------------------------
 #
 --------------------------------------------------------------------------------------------
