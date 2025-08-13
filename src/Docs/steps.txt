@@ -66,6 +66,9 @@ call bootstrap files in angular.json
             "scripts": [
                         "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ],
+    structural:
+      ngIf->show/hide elements
+      if->conditional rendering/improve performance
 --------------------------------------------------------------------------------------------
 #
 --------------------------------------------------------------------------------------------

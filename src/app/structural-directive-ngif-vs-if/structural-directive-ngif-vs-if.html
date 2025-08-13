@@ -1,0 +1,51 @@
+<div class="row text cent">
+    <div class="col 12">
+        <p>example of ngIf vs If</p>
+    </div>
+    <div class="row text-center">
+
+        <div class="col-4">
+            <div>
+                <input type="checkbox" (click)="onClick()">tearms and conditions
+            </div>
+            <div *ngIf="isChecked ">
+                <button class="btn btn-success">
+                    Submit
+                </button>
+            </div>
+        </div>
+
+          <div class="col-4">
+            with ngIf
+            <div *ngIf="isShowinput">
+                <input type="text" value="write something here" >
+            </div>
+
+       
+                <button class="btn btn-success" (click)="showInput()">
+                    Show
+                </button>
+
+                  <button class="btn btn-danger" (click)="hideInput()">
+                    Hide
+                </button>
+         </div>
+
+
+            <div class="col-4">
+          
+
+             with If
+           
+                <input type="text"  [(value)]="input1" >
+                <input type="text"  [value]="input2">
+            
+
+                 @if(input1 == input2) {
+                  <p>Input values are equal</p>
+                } @else {    
+                    <p>Input values are not equal</p>
+                    }
+         </div>
+    </div>
+</div>
