@@ -1,15 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { User } from "./user/user";
-import { DataBinding } from './data-binding/data-binding';
-import { Directives } from './directives/directives';
-import { StructuralDirectiveNgifVsIf } from './structural-directive-ngif-vs-if/structural-directive-ngif-vs-if';
+ import { StructuralDirectiveNgForVsFor } from './directives/structural-directive-ng-for-vs-for/structural-directive-ng-for-vs-for';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,  
-    DataBinding, Directives, 
-    StructuralDirectiveNgifVsIf],
+  imports: [RouterOutlet,
+    StructuralDirectiveNgForVsFor],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

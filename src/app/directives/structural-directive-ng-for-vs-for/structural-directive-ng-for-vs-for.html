@@ -1,0 +1,111 @@
+<div class="container text-center mt-3">
+    <h2 class="mb-4">ngFor vs for</h2>
+    
+    <div class="row mb-5">
+        <h4 class="mb-3">ngFor</h4>
+        <div class="col-md-4 mb-3">
+            <select class="form-select">
+                <option [value]="item.id" [selected]="item.id === 1" *ngFor="let item of employees">
+                    {{item.name}}-{{item.id}}
+                </option>
+            </select>
+        </div>
+        <div class="col-md-4 mb-3">
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Position</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of employees">
+                        <td>{{item.id}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.age}}</td>
+                        <td>{{item.position}}</td>
+                        <td>{{item.email}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4 mb-3">
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let item of companyList">
+                    {{item}}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <h4 class="mb-3">for</h4>
+        <div class="col-md-4 mb-3">
+            <select class="form-select">
+                @for(item of employees; track item.id) {
+                <option [value]="item.id" [selected]="item.id === 1">
+                    {{item.name}}-{{item.id}}
+                </option>
+                }
+            </select>
+        </div>
+        <div class="col-md-4 mb-3">
+          <table class="table table-bordered">
+  <thead>
+    <tr class="table-dark">
+      <th>Id</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Position</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (item of employees; track item.id; 
+          let odd = $odd;
+          let even = $even;
+          let first = $first;
+          let last = $last;
+          let index = $index) {
+      <tr [class.table-primary]="!first && !last"
+          [class.table-success]="first"
+          [class.table-danger]="last">
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.age }}</td>
+        <td>{{ item.position }}</td>
+        <td>{{ item.email }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
+        </div>
+        <div class="col-md-4 mb-3">
+            <ul class="list-group">
+                @for(item of companyList; track item) {
+                <li class="list-group-item">
+                    {{item}}
+                </li>
+                }
+            </ul>
+        </div>
+
+         <div class="col-md-4 mb-3">
+            <p>Empty option</p>
+            <ul class="list-group">
+                @for(item of emptyList; track item) {
+                <li class="list-group-item">
+                    {{item}}
+                </li>
+                }
+
+            @empty {
+            <p class="text-danger">No items found</p>
+            } 
+        </ul>
+        </div>
+    </div>
+</div>
