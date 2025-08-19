@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { StructuralDirectiveNgForVsFor } from './directives/structural-directive-ng-for-vs-for/structural-directive-ng-for-vs-for';
 import { StructuralDirectiveNgSwitch } from './directives/structural-directive-ng-switch/structural-directive-ng-switch';
 import { StructuralDirectiveAttribute } from './directives/structural-directive-attribute/structural-directive-attribute';
@@ -8,12 +8,16 @@ import { SignalLinked } from './Signals/signal-linked/signal-linked';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,
-    StructuralDirectiveNgForVsFor,
-    StructuralDirectiveNgSwitch,
-    StructuralDirectiveAttribute,
-    SignalWritable,
-    SignalLinked
+  imports: [
+    RouterOutlet,
+    // StructuralDirectiveNgForVsFor,
+    // StructuralDirectiveNgSwitch,
+    // StructuralDirectiveAttribute,
+    // SignalWritable,
+    // SignalLinked,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
   ],
 
   templateUrl: './app.html',

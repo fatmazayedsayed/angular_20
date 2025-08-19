@@ -117,11 +117,22 @@ Avoid redundant updates (no .set() duplication)
 Automatically stay in sync
 
 you have to set computed() function to define how to update the new variable
+--------------------------------------------------------------------------------------------
+#routing
+it used for navigation
+default routing 'main routing of site start up'
+redirectTo function->used to redirect to a certain page by default and u can give it a call back function
+* waild card->define page not found
+-routerLink->by default when click to navigation site will be refreshed, to not that to user SPA 'single page application', user router link
+-routerLinkActive: used to set current aactive link
+#navigation->move from componet to another
 
+routerLink->navigate by default, can't make any action before navigation
+differance between navigateByUrl and navigate
+navigateByUrl->will take only the path to new page
+navigate->will take path and list of paramters that can be
 --------------------------------------------------------------------------------------------
-#
---------------------------------------------------------------------------------------------
-#
+
 --------------------------------------------------------------------------------------------
 #
 --------------------------------------------------------------------------------------------
