@@ -81,7 +81,43 @@ structural:
   ngClass->add/remove class from elements, we can also use [class]
   same [ngStyle]="{add the style inside it}", we can also use [style]
 --------------------------------------------------------------------------------------------
-#
+#Siganl
+a value that notifies consumers when value changes, to read its value by callingits getter function
+to allow angular to track
+Why signals:
+Normally in Angular, we use:
+- @Input() + @Output() → to pass data between components
+- RxJS Observables → for reactive streams (async operations, HTTP calls, etc.)
+-Change detection → Angular runs checks across the component tree when something changes
+
+*A signal is basically a reactive variable:
+You create it with signal()
+You read its value by calling it like a function
+You update it with .set() or .update()
+Angular automatically tracks who depends on the signal, and only re-renders those parts of the template when it changes.
+This reduces unnecessary change detection and makes code easier to reason about.
+it will notify all consumers with its updates
+
+  types of Siganls:
+    1. writable:provide API for updating their values 
+    2. computed:read only that derive their value from other signals
+    writable signals:
+    you need to call it like a function
+
+    changeDetection : ChangeDetectionStrategy.OnPush ,used to update the UI , after a certain action
+in case of normal variable, we need to use changeDetection then action to update UI,
+but for signals we don't need that
+effect function will listen to any changes of signal variable
+
+*Linked Signals(computed signals):
+used to update values in real time
+to automatically update another signal variable once a certain signal variable changed
+Keep state declarative instead of imperative
+Avoid redundant updates (no .set() duplication)
+Automatically stay in sync
+
+you have to set computed() function to define how to update the new variable
+
 --------------------------------------------------------------------------------------------
 #
 --------------------------------------------------------------------------------------------
