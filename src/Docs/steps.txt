@@ -74,7 +74,9 @@ structural:
     has many extra options
        $odd;  $even; $first;  $last;  $index
     use for when u have mandatory tracking function
-  empty option to check empty list
+    empty option to check empty list
+  ngSwitch/switch:
+    like normal switch case 
 --------------------------------------------------------------------------------------------
 #
 --------------------------------------------------------------------------------------------

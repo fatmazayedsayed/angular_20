@@ -1,0 +1,45 @@
+<div class="container text-center mt-3">
+    <h2 class="mb-4">ngSwitch vs Switch</h2>
+
+    <div class="row mb-5">
+        <h4 class="mb-3">ngSwitch</h4>
+        <div class="col-md-4 mb-3">
+            <button class="btn btn-success m-1" (click)="setGrade(1)">Grade 1</button>
+            <button class="btn btn-primary m-1" (click)="setGrade(2)">Grade 2</button>
+            <button class="btn btn-warning m-1" (click)="setGrade(3)">Grade 3</button>
+        </div>
+        <div class="col-md-4">
+            <div [ngSwitch]="grade">
+                <p *ngSwitchCase="1">Grade 1</p>
+                <p *ngSwitchCase="2">Grade 2</p>
+                <p *ngSwitchCase="3">Grade 3</p>
+                <p *ngSwitchDefault>Unknown Grade</p>
+            </div>
+    </div>
+
+
+<br>
+        <h4 class="mb-3">Switch</h4>
+        <div class="col-md-4 mb-3">
+            <button class="btn btn-success m-1" (click)="setGrade(1)">Grade 1</button>
+            <button class="btn btn-primary m-1" (click)="setGrade(2)">Grade 2</button>
+            <button class="btn btn-warning m-1" (click)="setGrade(3)">Grade 3</button>
+        </div>
+        <div class="col-md-4">
+            @switch (grade) {
+@case (1){
+                <p>Grade 1</p>
+             }
+@case (2){
+                <p>Grade 2</p>
+             }
+@case (3){
+                <p>Grade 3</p>
+             }
+@default{
+                <p>Unknown Grade</p>
+             }
+        }
+         </div>
+    </div>
+</div>
