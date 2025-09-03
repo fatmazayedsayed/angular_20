@@ -131,7 +131,40 @@ routerLink->navigate by default, can't make any action before navigation
 differance between navigateByUrl and navigate
 navigateByUrl->will take only the path to new page
 navigate->will take path and list of paramters that can be
---------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------#Hooks
+  series of methods that angular calls at differnet stages of component life cycle, like intalize and destory
+
+  Creation: The component is instantiated and its dependencies are injected.
+Change Detection: Angular checks for changes in the data-bound properties.
+Rendering: The component's template is rendered or updated.
+Destruction: The component is destroyed and cleaned up.
+
+  1. ngOnChanges()->when an Input property has been changed(many)
+  It is called before ngOnInit (if the component has bound inputs) and whenever one or more data-bound input properties change. It is used to respond to changes in input properties.
+
+  2. ngOnInit()->after the componet is initalized(once)
+  It is Called once, after the first ngOnChanges. It is used to initialize the component after Angular first displays the data-bound properties.
+
+  3. ngDoCheck()->called every time changes detected run(many)
+  It is called during every change detection run, immediately after ngOnChanges and ngOnInit. It is used to detect and act upon changes that Angular can't or won't detect on its own.
+
+  4. ngAfterContentInit()->after the component contents has been initalized(once)
+  It is called once after the first ngDoCheck. It is used to perform any additional initialization required for the content.
+
+  5. ngAfterContentChecked()->after the componet content has been ngAfterContentChecked(many)
+  It is called after ngAfterContentInit and every subsequent ngDoCheck. It is used to act upon any changes after the content has been checked.
+
+  6. ngAfterViewInit()->after the component view has been initalized(once)
+  It is called once after the first ngAfterContentChecked. It is used to perform additional initialization required for the view.
+
+  7. ngAfterViewChecked()->after the componet view has been checked(once)
+  It is called after ngAfterViewInit and every subsequent ngAfterContentChecked. It is used to act upon any changes after the view has been checked.
+
+  8. ngOnDestory()->before component is destory(once)
+It is called immediately before Angular destroys the component. It is used to clean up any resources, such as subscriptions and event handlers, to avoid memory leaks.
+
+Note:
+you have to add interface per each hook u need to call
 
 --------------------------------------------------------------------------------------------
 #
